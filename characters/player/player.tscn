@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ctbqgikkbq3y0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
+
+[node name="player" type="CharacterBody2D" unique_id=1313339194]
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=206718825]
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=761568496]
+shape = SubResource("RectangleShape2D_b886q")
+debug_color = Color(0.5013369, 0.7507718, 3.85046e-07, 0)
