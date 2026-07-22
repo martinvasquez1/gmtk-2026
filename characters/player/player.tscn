@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ctbqgikkbq3y0"]
 
 [ext_resource type="Script" uid="uid://l5jvheawlr5y" path="res://characters/player/player.gd" id="1_508ok"]
+[ext_resource type="Texture2D" uid="uid://75i6cvo0y0tp" path="res://characters/player/player.png" id="2_xxgcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
 
@@ -8,8 +9,11 @@
 motion_mode = 1
 script = ExtResource("1_508ok")
 sprite = NodePath("sprite")
+accel = 6.0
+deaccel = 2.0
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=206718825]
+texture = ExtResource("2_xxgcw")
 
 [node name="collision" type="CollisionShape2D" parent="." unique_id=761568496]
 shape = SubResource("RectangleShape2D_b886q")

@@ -18,10 +18,12 @@ func _physics_process(delta: float) -> void:
 	move(delta)
 	move_and_slide()
 
+
 func move(delta : float) -> void:
 	var dir : Vector2 = Input.get_vector("left","right","up","down")
 	
 	if dir:
+		rotation = velocity.angle()
 		last_dir = dir
 		velocity = lerp(velocity, dir * speed, delta * accel)
 	else:
