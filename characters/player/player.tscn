@@ -20,3 +20,4 @@ shape = SubResource("RectangleShape2D_b886q")
 debug_color = Color(0.5013369, 0.7507718, 3.85046e-07, 0)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2075304290]
+position_smoothing_enabled = true
