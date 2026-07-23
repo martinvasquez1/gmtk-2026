@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
 
-[node name="player" type="CharacterBody2D" unique_id=1313339194 node_paths=PackedStringArray("sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=1313339194 node_paths=PackedStringArray("sprite")]
 motion_mode = 1
 script = ExtResource("1_508ok")
 sprite = NodePath("sprite")
