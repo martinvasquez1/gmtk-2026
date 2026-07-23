@@ -826,6 +826,11 @@ func _set_follow_position(delta: float) -> void:
 						auto_zoom_margin.w
 					)
 
+					# -------------- QUICK FIX --------------
+					if not _phantom_camera_manager:
+						return
+					# -------------- QUICK FIX --------------
+
 					if rect.size.x > rect.size.y * _phantom_camera_manager.screen_size.aspect():
 						zoom = clamp(_phantom_camera_manager.screen_size.x / rect.size.x, auto_zoom_min, auto_zoom_max) * Vector2.ONE
 					else:
