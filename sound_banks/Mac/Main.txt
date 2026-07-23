@@ -1,0 +1,31 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2607556080	Menu			\Menu\Menu	
+	2764240573	Combat			\Combat\Combat	
+	3004126553	Dmg_to_Enemies_n_Boss			\SFX\Dmg_to_Enemies_n_Boss	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	51631176	Cop Lead Verse 1	.cache\9E\{9E471D5B-CDFF-F413-318B-45DA9FA36054}.wem		\Containers\Music\Combat\Combat\Cop Lead Verse 1		5639072
+	71764290	Battle Blocks 3	.cache\E8\{E8E3E00F-C644-48B3-A698-54574BA2FFF2}.wem		\Containers\Music\Combat\Combat\Battle Blocks 3		4590436
+	76980113	Modern Chiptune	.cache\B3\{B3EF5ECD-E7F4-469D-73A4-8113118B38AA}.wem		\Containers\Music\Combat\Combat\Modern Chiptune		4590436
+	81013014	Women choir (1)	.cache\34\{346633A5-9453-DBE5-7CDA-1C328446F365}.wem		\Containers\Music\Combat\Combat\Women choir (1)		5114784
+	102995717	Noise Crush sfx_1	.cache\08\{08255A24-F972-02E1-FCC8-C93BB8DDC8F8}.wem		\Containers\SFX\DMGtoEnemynBoss\Noise Crush sfx_1\Noise Crush sfx_1		279496
+	120361589	MenusGodsTime	.cache\45\{456970A6-2F6B-B33E-2A3C-2914DA548350}.wem		\Containers\Music\Menu\MenusGodsTime\MenusGodsTime		13684588
+	205275123	Noise Crush sfx_2	.cache\4C\{4CDC4C20-DB28-ADCF-9E60-322277A9197F}.wem		\Containers\SFX\DMGtoEnemynBoss\Noise Crush sfx_2\Noise Crush sfx_2		279496
+	274755796	E Guitar	.cache\B7\{B77B09A5-C73D-8F35-2B2A-9A304BEE2937}.wem		\Containers\Music\Combat\Combat\E Guitar		5901216
+	296783554	Classic Electric Piano	.cache\06\{06FAB208-DAEE-606E-8F17-E04F8C8CD017}.wem		\Containers\Music\Combat\Combat\Classic Electric Piano		4590496
+	352187964	Live Evil Kit	.cache\2F\{2FFABE40-7ED5-BCFF-F65D-B735CC4004C2}.wem		\Containers\Music\Combat\Combat\Live Evil Kit		4590496
+	398012259	Live Evil Kit_1	.cache\5C\{5CE92ABA-4C2C-1799-5630-27E2196CC655}.wem		\Containers\Music\Combat\Combat\Live Evil Kit_1		4590496
+	460389408	Noise Crush sfx_4	.cache\60\{60A7F4EE-8B52-A9B1-B70A-A20ECD738101}.wem		\Containers\SFX\DMGtoEnemynBoss\Noise Crush sfx_4\Noise Crush sfx_4		349312
+	480820372	Umbriel 1	.cache\F6\{F60DF35C-CF69-8CC5-33C7-57C8F61A0473}.wem		\Containers\Music\Combat\Combat\Umbriel 1		5114784
+	493219273	Pixel EP	.cache\7D\{7D9A86EC-6645-E69D-F227-3AB3BFD436E3}.wem		\Containers\Music\Combat\Combat\Pixel EP		5508000
+	633110692	Bass of the Gods	.cache\5E\{5EC54D6E-9357-76CB-2CFE-71B9C193292F}.wem		\Containers\Music\Combat\Combat\Bass of the Gods		4590496
+	676436623	Umbriel 1	.cache\30\{309777FD-6DCE-1E2D-A1C8-14DEDACB9C27}.wem		\Containers\Music\Combat\Combat\Umbriel 1		5245856
+	676795337	Borg 1	.cache\D8\{D83499E0-4CEE-1439-5729-E9A0F5793AE1}.wem		\Containers\Music\Combat\Combat\Borg 1		4590496
+	686901883	Noise Crush sfx_3	.cache\15\{15C25B45-D3DE-F17A-DAAD-18AB1FF9E6F8}.wem		\Containers\SFX\DMGtoEnemynBoss\Noise Crush sfx_3\Noise Crush sfx_3		209680
+	710451399	Battle Blocks 3	.cache\F9\{F90FD843-0A50-E313-23F8-9CC8FA042460}.wem		\Containers\Music\Combat\Combat\Battle Blocks 3		4590436
+	733234578	INTRO	.cache\5D\{5D2FB692-49C9-338F-1E21-62E73C95A140}.wem		\Containers\Music\Combat\INTRO\INTRO		1575776
+	760738832	Umbriel 1	.cache\6F\{6FBA844F-A156-D792-3005-30B8E1880E05}.wem		\Containers\Music\Combat\Combat\Umbriel 1		5114784
+	890598621	Noise Crush sfx	.cache\07\{07EF146F-72D3-E491-9269-B8BF0D62CCD5}.wem		\Containers\SFX\DMGtoEnemynBoss\Noise Crush sfx\Noise Crush sfx		279500
+	892754165	Battle Blocks 3	.cache\F7\{F7B0B012-B5DE-35EB-A7BE-8002C6B73A76}.wem		\Containers\Music\Combat\Combat\Battle Blocks 3		4590436
+	1023541757	Dead Bass	.cache\12\{12BDB8B8-2C0A-95B9-6C1A-D1A86125A8F4}.wem		\Containers\Music\Combat\Combat\Dead Bass		4590496
+

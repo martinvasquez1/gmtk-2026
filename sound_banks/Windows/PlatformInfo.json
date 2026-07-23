@@ -1,0 +1,38 @@
+{
+ "PlatformInfo": {
+  "Platform": {
+   "Name": "Windows",
+   "BasePlatform": "Windows",
+   "Generator": "2026.1.2.9249"
+  },
+  "RootPaths": {
+   "ProjectRoot": "../../../../../../Desktop/CounterAttackGMTK2026",
+   "SourceFilesRoot": "../../../../../../Desktop/CounterAttackGMTK2026/.cache",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "../../../../../../Desktop/CounterAttackGMTK2026/GeneratedSoundBanks/Windows"
+  },
+  "DefaultAlign": "16",
+  "Settings": {
+   "AutoSoundBankDefinition": "true",
+   "CopyLooseStreamedMediaFiles": "true",
+   "SubFoldersForGeneratedFiles": "false",
+   "RemoveUnusedGeneratedFiles": "true",
+   "SourceControlGeneratedFiles": "true",
+   "GenerateHeaderFile": "true",
+   "GenerateContentTxtFile": "true",
+   "GenerateMetadataXML": "false",
+   "GenerateMetadataJSON": "true",
+   "GenerateAllBanksMetadata": "false",
+   "GeneratePerBankMetadata": "true",
+   "UseSoundBankNames": "true",
+   "AllowExceedingMaxSize": "false",
+   "MaxAttenuationInfo": "true",
+   "EstimatedDurationInfo": "true",
+   "PrintObjectGuid": "true",
+   "PrintObjectPath": "true",
+   "PrintObjectColor": "true"
+  },
+  "FileHash": "{0B80F15A-5A73-962E-BC98-0F7F1D3A9A03}"
+ }
+}

@@ -1,0 +1,318 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "174",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{48FC7B7A-0F6C-4BDD-AD7C-65640DA734D8}",
+    "Language": "SFX",
+    "Hash": "{72C1DB46-DFB7-B758-9B01-93C3BC40FBC9}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "51631176",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Cop Lead Verse 1.wav",
+      "CachePath": "9E/{9E471D5B-CDFF-F413-318B-45DA9FA36054}.wem"
+     },
+     {
+      "Id": "71764290",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Battle Blocks.wav",
+      "CachePath": "E8/{E8E3E00F-C644-48B3-A698-54574BA2FFF2}.wem"
+     },
+     {
+      "Id": "76980113",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Modern Chiptune.wav",
+      "CachePath": "B3/{B3EF5ECD-E7F4-469D-73A4-8113118B38AA}.wem"
+     },
+     {
+      "Id": "81013014",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Women choir (1).wav",
+      "CachePath": "34/{346633A5-9453-DBE5-7CDA-1C328446F365}.wem"
+     },
+     {
+      "Id": "102995717",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Noise Crush sfx_1.wav",
+      "CachePath": "08/{08255A24-F972-02E1-FCC8-C93BB8DDC8F8}.wem"
+     },
+     {
+      "Id": "120361589",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MenusGodsTime.wav",
+      "CachePath": "45/{456970A6-2F6B-B33E-2A3C-2914DA548350}.wem"
+     },
+     {
+      "Id": "205275123",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Noise Crush sfx_2.wav",
+      "CachePath": "4C/{4CDC4C20-DB28-ADCF-9E60-322277A9197F}.wem"
+     },
+     {
+      "Id": "274755796",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\E Guitar.wav",
+      "CachePath": "B7/{B77B09A5-C73D-8F35-2B2A-9A304BEE2937}.wem"
+     },
+     {
+      "Id": "296783554",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Classic Electric Piano.wav",
+      "CachePath": "06/{06FAB208-DAEE-606E-8F17-E04F8C8CD017}.wem"
+     },
+     {
+      "Id": "352187964",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Live Evil Kit.wav",
+      "CachePath": "2F/{2FFABE40-7ED5-BCFF-F65D-B735CC4004C2}.wem"
+     },
+     {
+      "Id": "398012259",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Live Evil Kit_1.wav",
+      "CachePath": "5C/{5CE92ABA-4C2C-1799-5630-27E2196CC655}.wem"
+     },
+     {
+      "Id": "460389408",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Noise Crush sfx_4.wav",
+      "CachePath": "60/{60A7F4EE-8B52-A9B1-B70A-A20ECD738101}.wem"
+     },
+     {
+      "Id": "480820372",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Umbriel 1.wav",
+      "CachePath": "F6/{F60DF35C-CF69-8CC5-33C7-57C8F61A0473}.wem"
+     },
+     {
+      "Id": "493219273",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Pixel EP.wav",
+      "CachePath": "7D/{7D9A86EC-6645-E69D-F227-3AB3BFD436E3}.wem"
+     },
+     {
+      "Id": "633110692",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Bass of the Gods.wav",
+      "CachePath": "5E/{5EC54D6E-9357-76CB-2CFE-71B9C193292F}.wem"
+     },
+     {
+      "Id": "676436623",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Umbriel 2.wav",
+      "CachePath": "30/{309777FD-6DCE-1E2D-A1C8-14DEDACB9C27}.wem"
+     },
+     {
+      "Id": "676795337",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Borg 1.wav",
+      "CachePath": "D8/{D83499E0-4CEE-1439-5729-E9A0F5793AE1}.wem"
+     },
+     {
+      "Id": "686901883",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Noise Crush sfx_3.wav",
+      "CachePath": "15/{15C25B45-D3DE-F17A-DAAD-18AB1FF9E6F8}.wem"
+     },
+     {
+      "Id": "710451399",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Battle Blocks 3.wav",
+      "CachePath": "F9/{F90FD843-0A50-E313-23F8-9CC8FA042460}.wem"
+     },
+     {
+      "Id": "733234578",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "INTRO.wav",
+      "CachePath": "5D/{5D2FB692-49C9-338F-1E21-62E73C95A140}.wem"
+     },
+     {
+      "Id": "760738832",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Umbriel 3.wav",
+      "CachePath": "6F/{6FBA844F-A156-D792-3005-30B8E1880E05}.wem"
+     },
+     {
+      "Id": "890598621",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Noise Crush sfx.wav",
+      "CachePath": "07/{07EF146F-72D3-E491-9269-B8BF0D62CCD5}.wem"
+     },
+     {
+      "Id": "892754165",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Battle Blocks_1.wav",
+      "CachePath": "F7/{F7B0B012-B5DE-35EB-A7BE-8002C6B73A76}.wem"
+     },
+     {
+      "Id": "1023541757",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CounterAttackGMTK2026wavfiles\\Dead Bass.wav",
+      "CachePath": "12/{12BDB8B8-2C0A-95B9-6C1A-D1A86125A8F4}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2764240573",
+      "Name": "Combat",
+      "ObjectPath": "\\Events\\Combat\\Combat",
+      "GUID": "{38464A60-077B-439A-BD78-5E3B5DAF030E}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "51631176"
+       },
+       {
+        "Id": "71764290"
+       },
+       {
+        "Id": "76980113"
+       },
+       {
+        "Id": "81013014"
+       },
+       {
+        "Id": "274755796"
+       },
+       {
+        "Id": "296783554"
+       },
+       {
+        "Id": "352187964"
+       },
+       {
+        "Id": "398012259"
+       },
+       {
+        "Id": "480820372"
+       },
+       {
+        "Id": "493219273"
+       },
+       {
+        "Id": "633110692"
+       },
+       {
+        "Id": "676436623"
+       },
+       {
+        "Id": "676795337"
+       },
+       {
+        "Id": "710451399"
+       },
+       {
+        "Id": "733234578"
+       },
+       {
+        "Id": "760738832"
+       },
+       {
+        "Id": "892754165"
+       },
+       {
+        "Id": "1023541757"
+       }
+      ]
+     },
+     {
+      "Id": "3004126553",
+      "Name": "Dmg_to_Enemies_n_Boss",
+      "ObjectPath": "\\Events\\SFX\\Dmg_to_Enemies_n_Boss",
+      "GUID": "{AC0927B4-6887-4158-94EA-C7A0E569AD16}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0909166",
+      "DurationMax": "1.8181666",
+      "MediaRefs": [
+       {
+        "Id": "102995717"
+       },
+       {
+        "Id": "205275123"
+       },
+       {
+        "Id": "460389408"
+       },
+       {
+        "Id": "686901883"
+       },
+       {
+        "Id": "890598621"
+       }
+      ]
+     },
+     {
+      "Id": "2607556080",
+      "Name": "Menu",
+      "ObjectPath": "\\Events\\Menu\\Menu",
+      "GUID": "{88B5F3DA-2899-4D26-A1E1-3892D3BE20D7}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "120361589"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A7F81766-8606-2FD4-A639-32DC636D1020}"
+ }
+}
