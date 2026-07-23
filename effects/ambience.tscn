@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bktexyy3hykok"]
+
+[ext_resource type="Texture2D" uid="uid://tnj0tfti5cka" path="res://effects/ambience.png" id="1_a4d8w"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6cm7y"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_eimro"]
+offsets = PackedFloat32Array(0, 0.17948718, 0.724359, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.8784314, 0.8784314, 0.8784314, 1, 0.8784314, 0.8784314, 0.8784314, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_mpkf5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tu4nt"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_tu4nt"]
+offsets = PackedFloat32Array(0, 0.17948718, 0.724359, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.8784314, 0.8784314, 0.8784314, 0.39215687, 0.8784314, 0.8784314, 0.8784314, 0.39215687, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_a4d8w"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Ambience" type="CPUParticles2D" unique_id=1333470062]
+material = SubResource("CanvasItemMaterial_6cm7y")
+amount = 16
+texture = ExtResource("1_a4d8w")
+lifetime = 10.0
+emission_shape = 3
+emission_rect_extents = Vector2(320, 90)
+direction = Vector2(-1, 0)
+spread = 5.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 20.0
+orbit_velocity_min = -0.01
+orbit_velocity_max = -0.01
+angle_min = -90.0
+angle_max = -90.0
+color_ramp = SubResource("Gradient_eimro")
+anim_offset_max = 1.0
+anim_offset_curve = SubResource("Curve_mpkf5")
+
+[node name="ambience_back" type="CPUParticles2D" parent="." unique_id=965245409]
+material = SubResource("CanvasItemMaterial_tu4nt")
+amount = 16
+texture = ExtResource("1_a4d8w")
+lifetime = 10.0
+emission_shape = 3
+emission_rect_extents = Vector2(320, 90)
+direction = Vector2(-1, 0)
+spread = 5.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+orbit_velocity_min = -0.01
+orbit_velocity_max = -0.01
+angle_min = -90.0
+angle_max = -90.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+color_ramp = SubResource("Gradient_tu4nt")
+anim_offset_max = 1.0
+anim_offset_curve = SubResource("Curve_a4d8w")
