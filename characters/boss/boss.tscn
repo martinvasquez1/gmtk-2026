@@ -2,11 +2,11 @@
 
 [ext_resource type="FontFile" uid="uid://ds2ygcg3sec4s" path="res://characters/boss/boss.ttf" id="1_8y74b"]
 [ext_resource type="Script" uid="uid://2thdbqa5oxq8" path="res://characters/boss/boss.gd" id="1_87qf7"]
-[ext_resource type="Texture2D" uid="uid://iqy0rn15ka8w" path="res://characters/boss/KairosHand_1.png" id="3_87qf7"]
+[ext_resource type="Texture2D" uid="uid://b7h23bcwtnpaw" path="res://characters/boss/hand.png" id="2_v5jhe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6cm7y"]
 font = ExtResource("1_8y74b")
-font_size = 40
+font_size = 32
 font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
@@ -33,13 +33,17 @@ text = "0 : 25"
 label_settings = SubResource("LabelSettings_6cm7y")
 
 [node name="Hand" type="Sprite2D" parent="." unique_id=861812500]
-position = Vector2(48, 32)
-texture = ExtResource("3_87qf7")
+position = Vector2(32, 24)
+texture = ExtResource("2_v5jhe")
+flip_h = true
+flip_v = true
+hframes = 2
 
 [node name="Hand2" type="Sprite2D" parent="." unique_id=243935202]
-position = Vector2(-48, 32)
-texture = ExtResource("3_87qf7")
-flip_h = true
+position = Vector2(-32, 24)
+texture = ExtResource("2_v5jhe")
+flip_v = true
+hframes = 2
 
 [node name="OneSecond" type="Timer" parent="." unique_id=1100333887]
 autostart = true

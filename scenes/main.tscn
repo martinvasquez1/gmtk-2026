@@ -6,6 +6,7 @@
 [ext_resource type="WwiseEvent" uid="uid://b0baw1lu2no7t" path="res://Wwise/resources/Event/{38464A60-077B-439A-BD78-5E3B5DAF030E}.tres" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://76j0xsy61cdh" path="res://UI/in_game/in_game.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://c5tx2ygvvrttk" path="res://scenes/enemy_spawner/enemy_spawner.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bktexyy3hykok" path="res://effects/ambience.tscn" id="9_choun"]
 
 [sub_resource type="Curve2D" id="Curve2D_tipki"]
 _data = {
@@ -47,3 +48,5 @@ curve = SubResource("Curve2D_tipki")
 event = ExtResource("8_85g3d")
 trigger_on = 1
 stop_on = 3
+
+[node name="Ambience" parent="." unique_id=1333470062 instance=ExtResource("9_choun")]
