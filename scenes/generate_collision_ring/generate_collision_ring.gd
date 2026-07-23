@@ -1,3 +1,4 @@
+class_name GenerateCollisionRing
 extends Node2D
 
 @export var sprite: Sprite2D
