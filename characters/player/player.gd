@@ -12,6 +12,9 @@ extends CharacterBody2D
 @export var accel : float = 10
 @export var deaccel : float = 8
 
+@export_group("Experimental")
+@export var no_mouse: bool = false
+
 var innit_speed : float
 var last_dir : Vector2
 
@@ -50,7 +53,10 @@ func move(delta : float) -> void:
 func _physics_process(delta: float) -> void:
 	move(delta)
 	
-	var mouse_pos := get_global_mouse_position()
-	look_at(mouse_pos)
+	if no_mouse:
+		rotation = velocity.angle()
+	else:
+		var mouse_pos := get_global_mouse_position()
+		look_at(mouse_pos)
 	
 	move_and_slide()
