@@ -1,8 +1,8 @@
 extends Node2D
 
-@export var totalAngle: float = 360
-@export var innerRadius: float = 200
-@export var outerRadius: float = 220
+@export var total_angle: float = 360
+@export var inner_radius: float = 200
+@export var outer_radius: float = 220
 
 
 func _ready():
@@ -10,7 +10,7 @@ func _ready():
 	add_child(area)
 
 	var collisionObject: Node2D
-	collisionObject = create_donut_shape(totalAngle, innerRadius, outerRadius)
+	collisionObject = create_donut_shape(total_angle, inner_radius, outer_radius)
 
 	area.add_child(collisionObject)
 
