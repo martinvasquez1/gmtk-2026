@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c4bpbl04so6ma"]
 
-[ext_resource type="Script" uid="uid://d4rqrop455hw" path="res://scenes/generate_collision_ring/generate_collision_ring.gd" id="1_qovih"]
-[ext_resource type="Shader" uid="uid://bk0gnvve72xht" path="res://scenes/generate_collision_ring/ring.gdshader" id="2_hh37a"]
-[ext_resource type="Texture2D" uid="uid://cfj08h1fxp1q0" path="res://scenes/generate_collision_ring/1x1.png" id="3_cqd8c"]
+[ext_resource type="Script" uid="uid://d4rqrop455hw" path="res://archive/generate_collision_ring/generate_collision_ring.gd" id="1_qovih"]
+[ext_resource type="Shader" uid="uid://bk0gnvve72xht" path="res://archive/generate_collision_ring/ring.gdshader" id="2_hh37a"]
+[ext_resource type="Texture2D" uid="uid://cfj08h1fxp1q0" path="res://archive/generate_collision_ring/1x1.png" id="3_cqd8c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_stnd7"]
 shader = ExtResource("2_hh37a")

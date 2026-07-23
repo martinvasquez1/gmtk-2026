@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_tbgi4"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_tefeu"]
-[ext_resource type="PackedScene" uid="uid://c4bpbl04so6ma" path="res://scenes/generate_collision_ring/generate_collision_ring.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://76j0xsy61cdh" path="res://UI/in_game/in_game.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://c5tx2ygvvrttk" path="res://scenes/enemy_spawner/enemy_spawner.tscn" id="9_85g3d"]
 
@@ -43,14 +42,13 @@ process_physics_priority = 300
 script = ExtResource("6_tefeu")
 metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
-[node name="PhantomCamera2D" type="Node2D" parent="." unique_id=606310819 node_paths=PackedStringArray("follow_target", "follow_targets", "follow_path")]
+[node name="PhantomCamera2D" type="Node2D" parent="." unique_id=606310819 node_paths=PackedStringArray("follow_target", "follow_path")]
 top_level = true
 position = Vector2(0, 80)
 script = ExtResource("4_tbgi4")
 priority = 1
 follow_mode = 4
 follow_target = NodePath("../Player")
-follow_targets = [NodePath("../Boss"), NodePath("../Player")]
 follow_path = NodePath("../CameraPath")
 tween_resource = SubResource("Resource_o6xl0")
 follow_damping = true
@@ -68,12 +66,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 position = Vector2(0, -1)
 curve = SubResource("Curve2D_tipki")
 
-[node name="GenerateCollisionRing" parent="." unique_id=1533505509 instance=ExtResource("7_o6xl0")]
-inner_radius = 500.0
-outer_radius = 520.0
-metadata/_edit_lock_ = true
-
 [node name="EnemySpawner" parent="." unique_id=1307649173 node_paths=PackedStringArray("generate_collision_ring") instance=ExtResource("9_85g3d")]
-generate_collision_ring = NodePath("../GenerateCollisionRing")
+generate_collision_ring = NodePath("")
 
 [node name="InGameUI" parent="." unique_id=411547140 instance=ExtResource("8_tipki")]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cfj08h1fxp1q0"
-path="res://.godot/imported/1x1.png-6a87fd1151f653cb16ff7e94b290fccd.ctex"
+path="res://.godot/imported/1x1.png-76a3b5d58ebdfecf36f2679992f11b86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/generate_collision_ring/1x1.png"
-dest_files=["res://.godot/imported/1x1.png-6a87fd1151f653cb16ff7e94b290fccd.ctex"]
+source_file="res://archive/generate_collision_ring/1x1.png"
+dest_files=["res://.godot/imported/1x1.png-76a3b5d58ebdfecf36f2679992f11b86.ctex"]
 
 [params]
 

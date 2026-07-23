@@ -37,6 +37,7 @@ enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 folder_colors={
 "res://UI/": "pink",
+"res://archive/": "gray",
 "res://characters/": "blue",
 "res://effects/": "yellow",
 "res://globals/": "teal",
