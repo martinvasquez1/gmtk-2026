@@ -5,7 +5,7 @@ extends Node2D
 
 var current_time_seconds: int = 100:
 	set(new_value):
-		current_time_seconds = new_value
+		current_time_seconds = max(new_value, 0)
 		update_label()
 
 func get_formatted_time(seconds) -> String:
