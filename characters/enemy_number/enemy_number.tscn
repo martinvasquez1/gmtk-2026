@@ -5,8 +5,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
 
-[node name="EnemyNumber" type="CharacterBody2D" unique_id=1444321047]
+[node name="EnemyNumber" type="CharacterBody2D" unique_id=1444321047 node_paths=PackedStringArray("label")]
 script = ExtResource("1_ky2cb")
+label = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=2032813561]
 offset_left = -20.0
