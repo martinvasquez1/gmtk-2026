@@ -7,3 +7,5 @@ signal shoot_number()
 
 @warning_ignore("unused_signal")
 signal camera_shake()
+@warning_ignore("unused_signal")
+signal hitstop()

@@ -10,6 +10,8 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player and BossGlobals.boss_node:
 		BossGlobals.boss_node.current_time_seconds -= hit_time_penalty 
+		PlayerGlobals.camera_shake.emit(Vector2(1,-1),0.1)
+		PlayerGlobals.hitstop.emit(0.8,0.1)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

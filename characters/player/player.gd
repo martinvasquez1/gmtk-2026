@@ -38,6 +38,7 @@ func handle_shoot() -> void:
 	projectile_instance.rotation = self.rotation
 	
 	PlayerGlobals.camera_shake.emit(cam_shake_force,shake_time)
+	PlayerGlobals.hitstop.emit(0.2,0.01)
 	recoil()
 	get_tree().current_scene.add_child(projectile_instance)
 

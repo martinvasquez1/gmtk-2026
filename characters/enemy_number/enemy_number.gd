@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export_group("Internal Nodes")
 @export var projectile_scene: PackedScene
 @export var death_particles: PackedScene
+@export var ghost : Sprite2D
+@export var ghost2 : Sprite2D
 
 @export_group("Values")
 @export var speed: float = 20.0
@@ -24,9 +26,17 @@ func _physics_process(_delta: float) -> void:
 		
 	var target_position: Vector2 = player_node.global_position
 	var direction = self.global_position.direction_to(target_position)
+	handle_ghost()
 	
 	velocity = speed * direction
 	move_and_slide()
+
+func handle_ghost() -> void:
+	ghost.global_position = global_position + Vector2(0,1)
+	ghost2.global_position = global_position + Vector2(0,2)
+	ghost.rotation = rotation
+	ghost2.rotation = rotation
+
 
 func _on_shoot_timeout() -> void:
 	if not player_node:

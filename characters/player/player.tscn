@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://l5jvheawlr5y" path="res://characters/player/player.gd" id="1_508ok"]
 [ext_resource type="PackedScene" uid="uid://cmrg3q7irv2w5" path="res://projectiles/number_projectile/number_projectile.tscn" id="2_exd8k"]
 [ext_resource type="Texture2D" uid="uid://75i6cvo0y0tp" path="res://characters/player/player.png" id="2_xxgcw"]
+[ext_resource type="Script" uid="uid://b3cixxr1crtef" path="res://characters/player/hitstop.gd" id="4_5dc8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
 size = Vector2(4, 4)
@@ -41,3 +42,6 @@ debug_color = Color(0.5013369, 0.7507718, 3.85046e-07, 0)
 
 [node name="SpawnPosition" type="Marker2D" parent="." unique_id=943475562]
 position = Vector2(16, 0)
+
+[node name="hitstop" type="Node" parent="." unique_id=969440910]
+script = ExtResource("4_5dc8e")
