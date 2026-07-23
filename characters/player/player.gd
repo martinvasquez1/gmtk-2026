@@ -2,8 +2,8 @@ class_name Player
 extends CharacterBody2D
 
 @export_group("Internal Nodes")
-##Sprite node.
 @export var sprite : Sprite2D
+@export var spawn_position: Marker2D
 
 @export_group("Values")
 @export var speed : float = 100
@@ -15,6 +15,13 @@ var innit_speed : float
 var last_dir : Vector2
 
 var stored_number: int = -1
+
+func handle_shoot() -> void:
+	print("Spawn number")
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		handle_shoot()
 
 func move(delta : float) -> void:
 	var dir : Vector2 = Input.get_vector("left","right","up","down")
