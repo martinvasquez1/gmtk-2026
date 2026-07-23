@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://c4bpbl04so6ma" path="res://scenes/generate_collision_ring/generate_collision_ring.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://76j0xsy61cdh" path="res://UI/in_game/in_game.tscn" id="8_tipki"]
 
 [sub_resource type="Resource" id="Resource_o6xl0"]
 script = ExtResource("5_tefeu")
@@ -66,3 +67,5 @@ draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="GenerateCollisionRing" parent="." unique_id=1533505509 instance=ExtResource("7_o6xl0")]
+
+[node name="InGameUI" parent="." unique_id=411547140 instance=ExtResource("8_tipki")]

@@ -23,6 +23,7 @@ var stored_number: int = -1:
 	set(new_value):
 		stored_number = new_value
 		has_unshot_number = true
+		PlayerGlobals.collected_number.emit(new_value)
 
 func handle_shoot() -> void:
 	var projectile_instance := projectile_scene.instantiate()
@@ -35,6 +36,7 @@ func handle_shoot() -> void:
 	get_tree().current_scene.add_child(projectile_instance)
 
 	has_unshot_number = false
+	PlayerGlobals.shoot_number.emit()
 
 func _input(event: InputEvent) -> void:
 	var can_shoot := event.is_action_pressed("shoot") and has_unshot_number
