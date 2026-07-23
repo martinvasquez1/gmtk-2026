@@ -66,7 +66,6 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 position = Vector2(0, -1)
 curve = SubResource("Curve2D_tipki")
 
-[node name="EnemySpawner" parent="." unique_id=1307649173 node_paths=PackedStringArray("generate_collision_ring") instance=ExtResource("9_85g3d")]
-generate_collision_ring = NodePath("")
+[node name="EnemySpawner" parent="." unique_id=1307649173 instance=ExtResource("9_85g3d")]
 
 [node name="InGameUI" parent="." unique_id=411547140 instance=ExtResource("8_tipki")]
