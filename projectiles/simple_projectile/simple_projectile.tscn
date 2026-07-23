@@ -3,14 +3,21 @@
 [ext_resource type="Texture2D" uid="uid://w5kafc3luitw" path="res://icon.svg" id="1_2x6yf"]
 [ext_resource type="Script" uid="uid://b78tjp3fcuawa" path="res://projectiles/simple_projectile/simple_projectile.gd" id="1_uft4f"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_uft4f"]
+radius = 3.0
+
 [node name="SimpleProjectile" type="Area2D" unique_id=1560363318]
 script = ExtResource("1_uft4f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1341226114]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_2x6yf")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=162542527]
+rect = Rect2(-3, -3, 6, 6)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=183035206]
+shape = SubResource("CircleShape2D_uft4f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

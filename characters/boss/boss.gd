@@ -3,7 +3,10 @@ extends Node2D
 
 @export var time_label: Label
 
-var current_time_seconds: int = 100
+var current_time_seconds: int = 100:
+	set(new_value):
+		current_time_seconds = new_value
+		update_label()
 
 func get_formatted_time(seconds) -> String:
 	var m = int(seconds / 60.0)
@@ -15,17 +18,12 @@ func update_label() -> void:
 	time_label.text = new_value
 
 func _ready() -> void:
+	BossGlobals.boss_node = self
 	update_label()
 
 func _on_one_second_timeout() -> void:
 	current_time_seconds -= 1
-	
-	if current_time_seconds == 0:
-		return
-	
-	update_label()
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area is NumberProjectile:
 		current_time_seconds += area.number_value
-		update_label()
