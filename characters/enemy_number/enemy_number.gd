@@ -35,7 +35,7 @@ func _on_shoot_timeout() -> void:
 	var player_pos := player_node.global_position
 	var direction := self.global_position.direction_to(player_pos)
 	
-	var distance := 32
+	var distance := 16
 	var shift_pos := (direction * distance)
 	var spawn_position := self.global_position + shift_pos
 	
