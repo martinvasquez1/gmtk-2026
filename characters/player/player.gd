@@ -14,17 +14,19 @@ extends CharacterBody2D
 var innit_speed : float
 var last_dir : Vector2
 
-func _physics_process(delta: float) -> void:
-	move(delta)
-	move_and_slide()
-
-
 func move(delta : float) -> void:
 	var dir : Vector2 = Input.get_vector("left","right","up","down")
 	
 	if dir:
-		rotation = velocity.angle()
 		last_dir = dir
 		velocity = lerp(velocity, dir * speed, delta * accel)
 	else:
 		velocity = lerp(velocity, Vector2.ZERO, delta * deaccel)
+
+func _physics_process(delta: float) -> void:
+	move(delta)
+	
+	var mouse_pos := get_global_mouse_position()
+	look_at(mouse_pos)
+	
+	move_and_slide()
