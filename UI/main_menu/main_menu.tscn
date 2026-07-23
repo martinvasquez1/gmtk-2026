@@ -2,6 +2,8 @@
 
 [ext_resource type="FontFile" uid="uid://ylorot6v7i77" path="res://resources/Birdo.ttf" id="1_bxyur"]
 [ext_resource type="Script" uid="uid://5eadcohxxids" path="res://UI/main_menu/main_menu.gd" id="1_osatk"]
+[ext_resource type="WwiseEvent" uid="uid://bktc85jpplp2" path="res://Wwise/resources/Event/{88B5F3DA-2899-4D26-A1E1-3892D3BE20D7}.tres" id="3_1xao8"]
+[ext_resource type="WwiseBank" uid="uid://cb6g8t6q4aymo" path="res://Wwise/resources/SoundBank/{48FC7B7A-0F6C-4BDD-AD7C-65640DA734D8}.tres" id="3_qtoa1"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=86179456]
 script = ExtResource("1_osatk")
@@ -29,3 +31,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_bxyur")
 text = "Press any key to start"
+
+[node name="AkBank" type="AkBank" parent="." unique_id=994358382]
+bank = ExtResource("3_qtoa1")
+load_on = 1
+unload_on = 3
+
+[node name="AkListener2D" type="AkListener2D" parent="." unique_id=2087522372]
+
+[node name="AkEvent2D" type="AkEvent2D" parent="." unique_id=647536378]
+event = ExtResource("3_1xao8")
+trigger_on = 2
+stop_on = 3

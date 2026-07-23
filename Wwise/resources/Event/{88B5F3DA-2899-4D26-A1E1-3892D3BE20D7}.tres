@@ -1,0 +1,8 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bktc85jpplp2"]
+
+[resource]
+is_in_user_defined_sound_bank = true
+name = "Menu"
+id = 2607556080
+guid = "{88B5F3DA-2899-4D26-A1E1-3892D3BE20D7}"
+dummy = true
