@@ -31,6 +31,18 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://UI/": "pink",
+"res://characters/": "blue",
+"res://effects/": "yellow",
+"res://globals/": "teal",
+"res://projectiles/": "red",
+"res://resources/": "purple",
+"res://scenes/": "green"
+}
+
 [input]
 
 up={
