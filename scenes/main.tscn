@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_tbgi4"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://c4bpbl04so6ma" path="res://scenes/generate_collision_ring/generate_collision_ring.tscn" id="7_o6xl0"]
 
 [sub_resource type="Resource" id="Resource_o6xl0"]
 script = ExtResource("5_tefeu")
@@ -40,6 +41,7 @@ position = Vector2(32, 316)
 physics_interpolation_mode = 1
 top_level = true
 position = Vector2(4, 40)
+process_callback = 0
 editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1556780727]
@@ -50,6 +52,7 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=606310819 node_paths=PackedStringArray("follow_targets")]
 top_level = true
+position = Vector2(4, 40)
 script = ExtResource("4_tbgi4")
 priority = 1
 follow_mode = 3
@@ -61,3 +64,5 @@ auto_zoom_min = 0.01
 auto_zoom_max = 1.0
 draw_limits = true
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
+
+[node name="GenerateCollisionRing" parent="." unique_id=1533505509 instance=ExtResource("7_o6xl0")]

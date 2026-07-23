@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c4bpbl04so6ma"]
+
+[ext_resource type="Script" uid="uid://d4rqrop455hw" path="res://scenes/generate_collision_ring/generate_collision_ring.gd" id="1_qovih"]
+
+[node name="GenerateCollisionRing" type="Node2D" unique_id=1533505509]
+script = ExtResource("1_qovih")
