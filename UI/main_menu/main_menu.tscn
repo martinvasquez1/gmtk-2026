@@ -35,7 +35,6 @@ text = "Press any key to start"
 [node name="AkBank" type="AkBank" parent="." unique_id=994358382]
 bank = ExtResource("3_qtoa1")
 load_on = 1
-unload_on = 3
 
 [node name="AkListener2D" type="AkListener2D" parent="." unique_id=2087522372]
 

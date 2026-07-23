@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_tbgi4"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_tefeu"]
+[ext_resource type="WwiseEvent" uid="uid://b0baw1lu2no7t" path="res://Wwise/resources/Event/{38464A60-077B-439A-BD78-5E3B5DAF030E}.tres" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://76j0xsy61cdh" path="res://UI/in_game/in_game.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://c5tx2ygvvrttk" path="res://scenes/enemy_spawner/enemy_spawner.tscn" id="9_85g3d"]
 
@@ -69,3 +70,10 @@ curve = SubResource("Curve2D_tipki")
 [node name="EnemySpawner" parent="." unique_id=1307649173 instance=ExtResource("9_85g3d")]
 
 [node name="InGameUI" parent="." unique_id=411547140 instance=ExtResource("8_tipki")]
+
+[node name="AkListener2D" type="AkListener2D" parent="." unique_id=1667364466]
+
+[node name="AkEvent2D" type="AkEvent2D" parent="." unique_id=998129678]
+event = ExtResource("8_85g3d")
+trigger_on = 1
+stop_on = 3

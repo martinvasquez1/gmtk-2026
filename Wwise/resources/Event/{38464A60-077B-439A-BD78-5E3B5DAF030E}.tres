@@ -1,0 +1,8 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://b0baw1lu2no7t"]
+
+[resource]
+is_in_user_defined_sound_bank = true
+name = "Combat"
+id = 2764240573
+guid = "{38464A60-077B-439A-BD78-5E3B5DAF030E}"
+dummy = true
