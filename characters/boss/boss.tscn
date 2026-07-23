@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://bcube0s0rem1b"]
 
 [ext_resource type="FontFile" uid="uid://ds2ygcg3sec4s" path="res://characters/boss/boss.ttf" id="1_8y74b"]
+[ext_resource type="Script" uid="uid://2thdbqa5oxq8" path="res://characters/boss/boss.gd" id="1_87qf7"]
 [ext_resource type="Texture2D" uid="uid://b7h23bcwtnpaw" path="res://characters/boss/hand.png" id="2_v5jhe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6cm7y"]
 font = ExtResource("1_8y74b")
 font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
-[node name="Boss" type="Node2D" unique_id=1099347555]
+[node name="Boss" type="Node2D" unique_id=1099347555 node_paths=PackedStringArray("time_label")]
+script = ExtResource("1_87qf7")
+time_label = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=1505380228]
 anchors_preset = 8
@@ -37,3 +40,8 @@ position = Vector2(-28, 7)
 texture = ExtResource("2_v5jhe")
 flip_v = true
 hframes = 2
+
+[node name="OneSecond" type="Timer" parent="." unique_id=1100333887]
+autostart = true
+
+[connection signal="timeout" from="OneSecond" to="." method="_on_one_second_timeout"]

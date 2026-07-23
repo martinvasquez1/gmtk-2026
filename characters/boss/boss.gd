@@ -1,0 +1,26 @@
+class_name Boss
+extends Node2D
+
+@export var time_label: Label
+
+var current_time_seconds: int = 100
+
+func get_formatted_time(seconds) -> String:
+	var m = int(seconds / 60.0)
+	var s = seconds - m * 60
+	return '%02d:%02d' % [m, s]
+
+func update_label() -> void:
+	var new_value = get_formatted_time(current_time_seconds)
+	time_label.text = new_value
+
+func _ready() -> void:
+	update_label()
+
+func _on_one_second_timeout() -> void:
+	current_time_seconds -= 1
+	
+	if current_time_seconds == 0:
+		return
+	
+	update_label()
