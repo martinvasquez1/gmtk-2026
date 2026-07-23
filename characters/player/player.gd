@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export_group("Internal Nodes")
 @export var sprite : Sprite2D
 @export var spawn_position: Marker2D
+@export var projectile_scene: PackedScene
 
 @export_group("Values")
 @export var speed : float = 100
@@ -17,7 +18,14 @@ var last_dir : Vector2
 var stored_number: int = -1
 
 func handle_shoot() -> void:
-	print("Spawn number")
+	var projectile_instance := projectile_scene.instantiate()
+	
+	projectile_instance.number_value = stored_number
+	
+	projectile_instance.global_position = spawn_position.global_position
+	projectile_instance.rotation = self.rotation
+	
+	get_tree().current_scene.add_child(projectile_instance)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot"):

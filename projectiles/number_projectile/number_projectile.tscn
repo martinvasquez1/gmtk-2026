@@ -5,8 +5,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
 radius = 25.019993
 
-[node name="NumberProjectile" type="Area2D" unique_id=657218044]
+[node name="NumberProjectile" type="Area2D" unique_id=657218044 node_paths=PackedStringArray("label")]
 script = ExtResource("1_5vai7")
+label = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=97274458]
 anchors_preset = 8

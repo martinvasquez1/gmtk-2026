@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://ctbqgikkbq3y0"]
 
 [ext_resource type="Script" uid="uid://l5jvheawlr5y" path="res://characters/player/player.gd" id="1_508ok"]
+[ext_resource type="PackedScene" uid="uid://cmrg3q7irv2w5" path="res://projectiles/number_projectile/number_projectile.tscn" id="2_exd8k"]
 [ext_resource type="Texture2D" uid="uid://75i6cvo0y0tp" path="res://characters/player/player.png" id="2_xxgcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
 
-[node name="Player" type="CharacterBody2D" unique_id=1313339194 node_paths=PackedStringArray("sprite")]
+[node name="Player" type="CharacterBody2D" unique_id=1313339194 node_paths=PackedStringArray("sprite", "spawn_position")]
 motion_mode = 1
 script = ExtResource("1_508ok")
 sprite = NodePath("sprite")
+spawn_position = NodePath("SpawnPosition")
+projectile_scene = ExtResource("2_exd8k")
 accel = 6.0
 deaccel = 2.0
 
