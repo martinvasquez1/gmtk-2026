@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export_group("Internal Nodes")
 @export var projectile_scene: PackedScene
+@export var death_particles: PackedScene
 
 @export_group("Values")
 @export var speed: float = 20.0
@@ -55,4 +56,9 @@ func _on_player_detection_body_exited(body: Node2D) -> void:
 func _on_pick_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.stored_number = value
+		
+		var particles_instance: GPUParticles2D = death_particles.instantiate()
+		get_tree().current_scene.add_child(particles_instance)
+		particles_instance.position = self.global_position
+		
 		queue_free()

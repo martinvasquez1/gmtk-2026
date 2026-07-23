@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://ylorot6v7i77" path="res://resources/Birdo.ttf" id="1_d5k4q"]
 [ext_resource type="Script" uid="uid://tp8r1ribgduk" path="res://characters/enemy_number/enemy_number.gd" id="1_ky2cb"]
 [ext_resource type="PackedScene" uid="uid://baccpkg2qhbbb" path="res://projectiles/simple_projectile/simple_projectile.tscn" id="2_vprpp"]
+[ext_resource type="PackedScene" uid="uid://br02myd0wgfn3" path="res://characters/enemy_number/picked_up_particle.tscn" id="3_elld5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
 
@@ -15,6 +16,7 @@ radius = 16.0
 [node name="EnemyNumber" type="CharacterBody2D" unique_id=1444321047 node_paths=PackedStringArray("label")]
 script = ExtResource("1_ky2cb")
 projectile_scene = ExtResource("2_vprpp")
+death_particles = ExtResource("3_elld5")
 label = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=2032813561]
