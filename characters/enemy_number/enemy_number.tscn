@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dn4yl6w7w3jgy"]
+
+[ext_resource type="FontFile" uid="uid://ylorot6v7i77" path="res://resources/Birdo.ttf" id="1_d5k4q"]
+[ext_resource type="Script" uid="uid://tp8r1ribgduk" path="res://characters/enemy_number/enemy_number.gd" id="1_ky2cb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
+
+[node name="EnemyNumber" type="CharacterBody2D" unique_id=1444321047]
+script = ExtResource("1_ky2cb")
+
+[node name="Label" type="Label" parent="." unique_id=2032813561]
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+theme_override_fonts/font = ExtResource("1_d5k4q")
+theme_override_font_sizes/font_size = 28
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1935737826]
+shape = SubResource("CircleShape2D_stnd7")
+
+[node name="Shoot" type="Timer" parent="." unique_id=520294447]
+
+[connection signal="timeout" from="Shoot" to="." method="_on_shoot_timeout"]
