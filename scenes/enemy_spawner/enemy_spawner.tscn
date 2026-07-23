@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://c5tx2ygvvrttk"]
 
 [ext_resource type="Script" uid="uid://djfr3bc55oya1" path="res://scenes/enemy_spawner/enemy_spawner.gd" id="1_85wi1"]
+[ext_resource type="Script" uid="uid://pda3c0lgsoko" path="res://scenes/enemy_spawner/get_random_circle_pos.gd" id="2_gppuq"]
 
 [node name="EnemySpawner" type="Node" unique_id=1307649173]
 script = ExtResource("1_85wi1")
 
 [node name="Timer" type="Timer" parent="." unique_id=1192916227]
 autostart = true
+
+[node name="GetRandomRingPos" type="Node" parent="." unique_id=308881839]
+script = ExtResource("2_gppuq")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

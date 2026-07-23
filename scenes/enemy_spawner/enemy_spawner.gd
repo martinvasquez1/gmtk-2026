@@ -1,34 +1,30 @@
 class_name EnemySpawner
 extends Node
 
+@export_group("Experimental")
+## Spawns enemies inside the inner_radius when a GenerateCollisionRing is set.
 @export var generate_collision_ring: GenerateCollisionRing
+
+@onready var GetRandomRingPos: Node = $GetRandomRingPos
 
 var enemy_number_scene := preload("res://characters/enemy_number/enemy_number.tscn")
 
-var viewport_x = ProjectSettings.get_setting("display/window/size/viewport_width")
-var viewport_y = ProjectSettings.get_setting("display/window/size/viewport_height")
-
-var circular_arena_radius: float
-var circular_arena_position: Vector2
-
 func _ready() -> void:
-	var margin := 16
-	circular_arena_radius = generate_collision_ring.inner_radius - margin
-	circular_arena_position = generate_collision_ring.global_position
+	if generate_collision_ring:
+		var margin := 16
+		GetRandomRingPos.circular_arena_radius = generate_collision_ring.inner_radius - margin
+		GetRandomRingPos.circular_arena_position = generate_collision_ring.global_position
 
-func get_random_circle_pos(radius: float, center_position: Vector2) -> Vector2:
-	var random_angle = randf_range(0, TAU)
-	var random_radius = radius * sqrt(randf())
-	
-	var x = random_radius * cos(random_angle) + center_position.x
-	var y = random_radius * sin(random_angle) + center_position.y
+func get_random_pos() -> Vector2:
+	if generate_collision_ring:
+		return GetRandomRingPos.get_random_circle_pos(GetRandomRingPos.circular_arena_radius, GetRandomRingPos.circular_arena_position)
+	else:
+		return Vector2.ZERO
 
-	return Vector2(x, y)
-	
 func handle_enemy_spawn():
 	var enemy_instance := enemy_number_scene.instantiate()
 	
-	var random_pos := get_random_circle_pos(circular_arena_radius, circular_arena_position)
+	var random_pos := get_random_pos()
 	enemy_instance.global_position = random_pos
 	
 	get_tree().current_scene.add_child(enemy_instance)
