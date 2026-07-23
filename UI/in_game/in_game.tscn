@@ -3,9 +3,10 @@
 [ext_resource type="FontFile" uid="uid://ylorot6v7i77" path="res://resources/Birdo.ttf" id="1_g0boh"]
 [ext_resource type="Script" uid="uid://duwgl8us0uktv" path="res://UI/in_game/in_game.gd" id="1_la1o3"]
 
-[node name="InGameUI" type="CanvasLayer" unique_id=411547140 node_paths=PackedStringArray("label")]
+[node name="InGameUI" type="CanvasLayer" unique_id=411547140 node_paths=PackedStringArray("total_time_label", "current_number_label")]
 script = ExtResource("1_la1o3")
-label = NodePath("Control/MarginContainer/CurrentNumber")
+total_time_label = NodePath("Control/MarginContainer/TotalTime")
+current_number_label = NodePath("Control/MarginContainer/CurrentNumber")
 
 [node name="Control" type="Control" parent="." unique_id=1461575495]
 layout_mode = 3
@@ -17,20 +18,35 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=646563484]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -40.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_constants/margin_right = 14
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="TotalTime" type="Label" parent="Control/MarginContainer" unique_id=1390372673]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_g0boh")
+text = "01:20"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="OneSecond" type="Timer" parent="Control/MarginContainer/TotalTime" unique_id=2122854666]
+autostart = true
 
 [node name="CurrentNumber" type="Label" parent="Control/MarginContainer" unique_id=1888521162]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("1_g0boh")
 text = "777"
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[connection signal="timeout" from="Control/MarginContainer/TotalTime/OneSecond" to="." method="_on_one_second_timeout"]

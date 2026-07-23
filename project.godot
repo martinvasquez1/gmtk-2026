@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PhantomCameraManager="*uid://duq6jhf6unyis"
 BossGlobals="*uid://d4jijsdrxonru"
 PlayerGlobals="*uid://b4fk7wtlhdop2"
+StringUtils="*uid://nh7bt8jys6n5"
 
 [display]
 
