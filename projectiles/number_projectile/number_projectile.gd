@@ -1,3 +1,4 @@
+class_name NumberProjectile
 extends Area2D
 
 @export var label: Label

@@ -8,6 +8,9 @@
 font = ExtResource("1_8y74b")
 font_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
+radius = 39.051247
+
 [node name="Boss" type="Node2D" unique_id=1099347555 node_paths=PackedStringArray("time_label")]
 script = ExtResource("1_87qf7")
 time_label = NodePath("Label")
@@ -44,4 +47,11 @@ hframes = 2
 [node name="OneSecond" type="Timer" parent="." unique_id=1100333887]
 autostart = true
 
+[node name="HurtBox" type="Area2D" parent="." unique_id=924390350]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1376751973]
+shape = SubResource("CircleShape2D_stnd7")
+debug_color = Color(0.9884766, 0.5700373, 0, 0.41960785)
+
 [connection signal="timeout" from="OneSecond" to="." method="_on_one_second_timeout"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

@@ -24,3 +24,8 @@ func _on_one_second_timeout() -> void:
 		return
 	
 	update_label()
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area is NumberProjectile:
+		current_time_seconds += area.number_value
+		update_label()
