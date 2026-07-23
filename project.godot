@@ -21,7 +21,7 @@ PhantomCameraManager="*uid://duq6jhf6unyis"
 BossGlobals="*uid://d4jijsdrxonru"
 PlayerGlobals="*uid://b4fk7wtlhdop2"
 StringUtils="*uid://nh7bt8jys6n5"
-WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+WwiseRuntimeManager="*uid://detjvukgeulcn"
 
 [display]
 
@@ -92,11 +92,3 @@ rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.12941177, 0.12941177, 0.12941177, 1)
-
-[wwise]
-
-common_user_settings/root_output_path="res://sound_banks"
-project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
-project_settings/mac_platform_info="res://Wwise/resources/Mac.tres"
-project_settings/linux_platform_info="res://Wwise/resources/Linux.tres"
-project_settings/web_platform_info="res://Wwise/resources/Web.tres"
