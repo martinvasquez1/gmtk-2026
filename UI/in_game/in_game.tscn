@@ -3,6 +3,9 @@
 [ext_resource type="FontFile" uid="uid://ylorot6v7i77" path="res://resources/Birdo.ttf" id="1_g0boh"]
 [ext_resource type="Script" uid="uid://duwgl8us0uktv" path="res://UI/in_game/in_game.gd" id="1_la1o3"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_85g3d"]
+font_size = 13
+
 [node name="InGameUI" type="CanvasLayer" unique_id=411547140 node_paths=PackedStringArray("total_time_label", "current_number_label")]
 script = ExtResource("1_la1o3")
 total_time_label = NodePath("Control/MarginContainer/TotalTime")
@@ -31,9 +34,10 @@ theme_override_constants/margin_bottom = 8
 [node name="TotalTime" type="Label" parent="Control/MarginContainer" unique_id=1390372673]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 0
+size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("1_g0boh")
 text = "01:20"
+label_settings = SubResource("LabelSettings_85g3d")
 horizontal_alignment = 2
 vertical_alignment = 2
 

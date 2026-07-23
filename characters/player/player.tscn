@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://75i6cvo0y0tp" path="res://characters/player/player.png" id="2_xxgcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
+size = Vector2(4, 4)
 
 [node name="Player" type="CharacterBody2D" unique_id=1313339194 node_paths=PackedStringArray("sprite", "spawn_position")]
 motion_mode = 1
@@ -12,9 +13,8 @@ script = ExtResource("1_508ok")
 sprite = NodePath("sprite")
 spawn_position = NodePath("SpawnPosition")
 projectile_scene = ExtResource("2_exd8k")
-speed = 140.0
-accel = 6.0
-deaccel = 2.0
+accel = 2.0
+deaccel = 0.5
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=206718825]
 texture = ExtResource("2_xxgcw")
