@@ -19,7 +19,22 @@ position = Vector2(0, 80)
 position = Vector2(8, 0)
 
 [node name="EnemyNumber" parent="." unique_id=1444321047 instance=ExtResource("3_sugp2")]
-position = Vector2(-80, 72)
+position = Vector2(-136, 72)
+
+[node name="EnemyNumber2" parent="." unique_id=1138139161 instance=ExtResource("3_sugp2")]
+position = Vector2(-116, 0)
+
+[node name="EnemyNumber3" parent="." unique_id=1605876015 instance=ExtResource("3_sugp2")]
+position = Vector2(160, -48)
+
+[node name="EnemyNumber4" parent="." unique_id=819551811 instance=ExtResource("3_sugp2")]
+position = Vector2(296, 88)
+
+[node name="EnemyNumber5" parent="." unique_id=1943917901 instance=ExtResource("3_sugp2")]
+position = Vector2(184, 304)
+
+[node name="EnemyNumber6" parent="." unique_id=56640634 instance=ExtResource("3_sugp2")]
+position = Vector2(32, 316)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=366808046]
 physics_interpolation_mode = 1
@@ -35,7 +50,6 @@ metadata/_custom_type_script = "uid://bd046eokvcnu2"
 
 [node name="PhantomCamera2D" type="Node2D" parent="." unique_id=606310819 node_paths=PackedStringArray("follow_targets")]
 top_level = true
-position = Vector2(4, 40)
 script = ExtResource("4_tbgi4")
 priority = 1
 follow_mode = 3

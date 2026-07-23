@@ -12,6 +12,7 @@ script = ExtResource("1_508ok")
 sprite = NodePath("sprite")
 spawn_position = NodePath("SpawnPosition")
 projectile_scene = ExtResource("2_exd8k")
+speed = 140.0
 accel = 6.0
 deaccel = 2.0
 

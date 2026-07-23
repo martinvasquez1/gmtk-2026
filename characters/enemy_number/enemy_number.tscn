@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gqeb"]
-radius = 64.0
+radius = 152.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_as5p4"]
 radius = 16.0
@@ -33,6 +33,7 @@ shape = SubResource("CircleShape2D_stnd7")
 disabled = true
 
 [node name="Shoot" type="Timer" parent="." unique_id=520294447]
+wait_time = 2.0
 autostart = true
 
 [node name="PlayerDetection" type="Area2D" parent="." unique_id=1251714062]

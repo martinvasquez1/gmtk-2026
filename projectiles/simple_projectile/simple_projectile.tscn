@@ -8,6 +8,8 @@ radius = 3.0
 
 [node name="SimpleProjectile" type="Area2D" unique_id=1560363318]
 script = ExtResource("1_uft4f")
+speed = 140.0
+hit_time_penalty = 15
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1341226114]
 scale = Vector2(0.05, 0.05)
