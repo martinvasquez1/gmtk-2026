@@ -21,13 +21,11 @@ position = Vector2(8, 0)
 [node name="EnemyNumber" parent="." unique_id=1444321047 instance=ExtResource("3_sugp2")]
 position = Vector2(-80, 72)
 
-[node name="EnemyNumber2" parent="." unique_id=1041896530 instance=ExtResource("3_sugp2")]
-position = Vector2(88, 56)
-
-[node name="EnemyNumber3" parent="." unique_id=195813153 instance=ExtResource("3_sugp2")]
-position = Vector2(-104, 23)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=366808046]
+physics_interpolation_mode = 1
+top_level = true
+position = Vector2(4, 40)
+editor_draw_limits = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1556780727]
 process_priority = 300

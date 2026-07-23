@@ -1,6 +1,10 @@
 class_name EnemyNumber
 extends CharacterBody2D
 
+@export_group("Internal Nodes")
+@export var projectile_scene: PackedScene
+
+@export_group("Values")
 @export var speed: float = 20.0
 @export var label: Label
 
@@ -24,7 +28,21 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _on_shoot_timeout() -> void:
-	print("Spawn simple projectile")
+	if not player_node:
+		return
+		
+	var player_pos := player_node.global_position
+	var direction := self.global_position.direction_to(player_pos)
+	
+	var distance := 32
+	var shift_pos := (direction * distance)
+	var spawn_position := self.global_position + shift_pos
+	
+	var projectile_instance := projectile_scene.instantiate()
+	projectile_instance.global_position = spawn_position
+	projectile_instance.rotation = get_angle_to(player_pos)
+	
+	get_tree().current_scene.add_child(projectile_instance)
 
 func _on_player_detection_body_entered(body: Node2D) -> void:
 	if body is Player:
