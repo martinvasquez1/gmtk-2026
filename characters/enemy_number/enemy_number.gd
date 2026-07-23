@@ -33,3 +33,8 @@ func _on_player_detection_body_entered(body: Node2D) -> void:
 func _on_player_detection_body_exited(body: Node2D) -> void:
 	if body is Player:
 		player_node = null
+
+func _on_pick_body_entered(body: Node2D) -> void:
+	if body is Player:
+		body.stored_number = value
+		queue_free()

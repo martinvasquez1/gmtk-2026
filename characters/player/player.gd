@@ -14,6 +14,8 @@ extends CharacterBody2D
 var innit_speed : float
 var last_dir : Vector2
 
+var stored_number: int = -1
+
 func move(delta : float) -> void:
 	var dir : Vector2 = Input.get_vector("left","right","up","down")
 	
