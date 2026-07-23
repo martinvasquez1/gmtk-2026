@@ -5,6 +5,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_stnd7"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gqeb"]
+radius = 64.0
+
 [node name="EnemyNumber" type="CharacterBody2D" unique_id=1444321047 node_paths=PackedStringArray("label")]
 script = ExtResource("1_ky2cb")
 label = NodePath("Label")
@@ -25,4 +28,12 @@ shape = SubResource("CircleShape2D_stnd7")
 
 [node name="Shoot" type="Timer" parent="." unique_id=520294447]
 
+[node name="PlayerDetection" type="Area2D" parent="." unique_id=1251714062]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection" unique_id=735071775]
+shape = SubResource("CircleShape2D_5gqeb")
+debug_color = Color(0.73863095, 0.22219276, 0.99999994, 0.41960785)
+
 [connection signal="timeout" from="Shoot" to="." method="_on_shoot_timeout"]
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
