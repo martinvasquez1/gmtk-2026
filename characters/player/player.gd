@@ -15,7 +15,11 @@ extends CharacterBody2D
 var innit_speed : float
 var last_dir : Vector2
 
-var stored_number: int = -1
+var has_unshot_number: bool = false
+var stored_number: int = -1:
+	set(new_value):
+		stored_number = new_value
+		has_unshot_number = true
 
 func handle_shoot() -> void:
 	var projectile_instance := projectile_scene.instantiate()
@@ -27,8 +31,11 @@ func handle_shoot() -> void:
 	
 	get_tree().current_scene.add_child(projectile_instance)
 
+	has_unshot_number = false
+
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("shoot"):
+	var can_shoot := event.is_action_pressed("shoot") and has_unshot_number
+	if can_shoot:
 		handle_shoot()
 
 func move(delta : float) -> void:
