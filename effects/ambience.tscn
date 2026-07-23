@@ -10,7 +10,12 @@ particles_anim_loop = false
 
 [sub_resource type="Gradient" id="Gradient_eimro"]
 offsets = PackedFloat32Array(0, 0.17948718, 0.724359, 1)
-colors = PackedColorArray(0, 0, 0, 0, 0.8784314, 0.8784314, 0.8784314, 1, 0.8784314, 0.8784314, 0.8784314, 1, 1, 1, 1, 0)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_h61g6"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.31410256, 0.6602564)
+colors = PackedColorArray(0.8784314, 0.8784314, 0.8784314, 1, 0.45882353, 0.45882353, 0.45882353, 1, 0.25882354, 0.25882354, 0.25882354, 1)
 
 [sub_resource type="Curve" id="Curve_mpkf5"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -43,6 +48,7 @@ gravity = Vector2(0, 0)
 initial_velocity_min = 20.0
 initial_velocity_max = 20.0
 color_ramp = SubResource("Gradient_eimro")
+color_initial_ramp = SubResource("Gradient_h61g6")
 anim_offset_max = 1.0
 anim_offset_curve = SubResource("Curve_mpkf5")
 
