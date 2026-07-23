@@ -7,16 +7,32 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
 size = Vector2(4, 4)
 
-[node name="Player" type="CharacterBody2D" unique_id=1313339194 node_paths=PackedStringArray("sprite", "spawn_position")]
+[node name="Player" type="CharacterBody2D" unique_id=1313339194 node_paths=PackedStringArray("sprite", "spawn_position", "ghost", "ghost2")]
 motion_mode = 1
 script = ExtResource("1_508ok")
 sprite = NodePath("sprite")
 spawn_position = NodePath("SpawnPosition")
 projectile_scene = ExtResource("2_exd8k")
+ghost = NodePath("sprite/sprite2")
+ghost2 = NodePath("sprite/sprite3")
 accel = 2.0
 deaccel = 0.5
+cam_shake_force = Vector2(-2, 2)
+shake_time = 0.1
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=206718825]
+z_index = 1
+texture = ExtResource("2_xxgcw")
+
+[node name="sprite2" type="Sprite2D" parent="sprite" unique_id=204077835]
+self_modulate = Color(0.45882353, 0.45882353, 0.45882353, 1)
+top_level = true
+texture = ExtResource("2_xxgcw")
+
+[node name="sprite3" type="Sprite2D" parent="sprite" unique_id=609065860]
+self_modulate = Color(0.25882354, 0.25882354, 0.25882354, 1)
+top_level = true
+z_index = -1
 texture = ExtResource("2_xxgcw")
 
 [node name="collision" type="CollisionShape2D" parent="." unique_id=761568496]

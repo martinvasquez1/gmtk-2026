@@ -5,12 +5,16 @@ extends CharacterBody2D
 @export var sprite : Sprite2D
 @export var spawn_position: Marker2D
 @export var projectile_scene: PackedScene
+@export var ghost : Sprite2D
+@export var ghost2 : Sprite2D
 
 @export_group("Values")
 @export var speed : float = 100
-@export var run_speed : float = 125
 @export var accel : float = 10
 @export var deaccel : float = 8
+
+@export var cam_shake_force : Vector2 = Vector2(1,1)
+@export var shake_time : float = 0.5
 
 @export_group("Experimental")
 @export var no_mouse: bool = false
@@ -33,10 +37,22 @@ func handle_shoot() -> void:
 	projectile_instance.global_position = spawn_position.global_position
 	projectile_instance.rotation = self.rotation
 	
+	PlayerGlobals.camera_shake.emit(cam_shake_force,shake_time)
+	recoil()
 	get_tree().current_scene.add_child(projectile_instance)
 
 	has_unshot_number = false
 	PlayerGlobals.shoot_number.emit()
+
+func handle_ghost() -> void:
+	ghost.global_position = global_position + Vector2(0,1)
+	ghost2.global_position = global_position + Vector2(0,2)
+	ghost.rotation = rotation
+	ghost2.rotation = rotation
+
+func recoil() -> void:
+	var mouse_dir : Vector2 = -global_position.direction_to(get_global_mouse_position())
+	velocity += mouse_dir * speed
 
 func _input(event: InputEvent) -> void:
 	var can_shoot := event.is_action_pressed("shoot") and has_unshot_number
@@ -54,7 +70,7 @@ func move(delta : float) -> void:
 
 func _physics_process(delta: float) -> void:
 	move(delta)
-	
+	handle_ghost()
 	if no_mouse:
 		rotation = velocity.angle()
 	else:
