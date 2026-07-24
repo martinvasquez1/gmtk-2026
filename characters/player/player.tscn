@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cmrg3q7irv2w5" path="res://projectiles/number_projectile/number_projectile.tscn" id="2_exd8k"]
 [ext_resource type="Texture2D" uid="uid://75i6cvo0y0tp" path="res://characters/player/player.png" id="2_xxgcw"]
 [ext_resource type="Script" uid="uid://b3cixxr1crtef" path="res://characters/player/hitstop.gd" id="4_5dc8e"]
+[ext_resource type="Texture2D" uid="uid://tnj0tfti5cka" path="res://effects/ambience.png" id="4_ixbpm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b886q"]
 size = Vector2(4, 4)
@@ -38,6 +39,36 @@ self_modulate = Color(0.25882354, 0.25882354, 0.25882354, 1)
 top_level = true
 z_index = -1
 texture = ExtResource("2_xxgcw")
+
+[node name="ChargedShot" type="CPUParticles2D" parent="sprite" unique_id=1412583855]
+visible = false
+position = Vector2(6, 0)
+amount = 6
+texture = ExtResource("4_ixbpm")
+lifetime = 0.16
+local_coords = true
+emission_shape = 3
+emission_rect_extents = Vector2(7.07, 10)
+direction = Vector2(-1, 0)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 106.06
+initial_velocity_max = 106.06
+angle_min = 90.0
+angle_max = 90.0
+
+[node name="ChargingShot" type="CPUParticles2D" parent="sprite" unique_id=568935172]
+visible = false
+position = Vector2(6, 0)
+amount = 2
+lifetime = 0.16
+emission_shape = 3
+emission_rect_extents = Vector2(7.07, 10)
+direction = Vector2(-1, 0)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 8.0
+initial_velocity_max = 8.0
 
 [node name="collision" type="CollisionShape2D" parent="." unique_id=761568496]
 shape = SubResource("RectangleShape2D_b886q")

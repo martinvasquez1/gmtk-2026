@@ -22,6 +22,11 @@ var movement_state: move_states
 var prev_velocity : Vector2
 var can_dash : bool
 
+var shoot_held : bool
+var shoot_hold_duration : float
+@export var charge_hold_duration : float = 1
+@export var charge_shot_power : float = 2
+
 @export var cam_shake_force : Vector2 = Vector2(1,1)
 @export var shake_time : float = 0.5
 
@@ -39,9 +44,11 @@ var stored_number: int = -1:
 		PlayerGlobals.collected_number.emit(new_value)
 
 func handle_shoot() -> void:
+	
 	var projectile_instance := projectile_scene.instantiate()
 	
-	projectile_instance.number_value = stored_number
+	var power = charge_shot_power if shoot_hold_duration >= charge_hold_duration else 1.0
+	projectile_instance.number_value = stored_number * power
 	
 	projectile_instance.global_position = spawn_position.global_position
 	projectile_instance.rotation = self.rotation
@@ -53,6 +60,10 @@ func handle_shoot() -> void:
 
 	has_unshot_number = false
 	PlayerGlobals.shoot_number.emit()
+	
+	$sprite/ChargingShot.hide()
+	$sprite/ChargedShot.hide()
+	shoot_hold_duration = 0
 
 func handle_ghost() -> void:
 	ghost.global_position = global_position + Vector2(0,1)
@@ -72,9 +83,15 @@ func dash() -> void:
 	$DashStateExit.start(dash_duration)
 
 func _input(event: InputEvent) -> void:
-	var can_shoot := event.is_action_pressed("shoot") and has_unshot_number
-	if can_shoot:
-		handle_shoot()
+	#var can_shoot := event.is_action_pressed("shoot") and has_unshot_number
+	#if can_shoot:
+		#handle_shoot()
+	if has_unshot_number:
+		if event.is_action_pressed("shoot"):
+			shoot_held = true
+		elif event.is_action_released("shoot"):
+			shoot_held = false
+			handle_shoot()
 
 func move(delta : float) -> void:
 	var dir : Vector2 = Input.get_vector("left","right","up","down")
@@ -106,6 +123,15 @@ func _physics_process(delta: float) -> void:
 		look_at(mouse_pos)
 	
 	move_and_slide()
+	
+	if shoot_held:
+		shoot_hold_duration += delta
+		if shoot_hold_duration < charge_hold_duration:
+			$sprite/ChargingShot.show()
+		else:
+			$sprite/ChargingShot.hide()
+			$sprite/ChargedShot.show()
+	
 
 func is_dashing():
 	return movement_state == move_states.DASHING
