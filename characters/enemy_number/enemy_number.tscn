@@ -24,7 +24,6 @@ death_particles = ExtResource("3_elld5")
 sprite = NodePath("EnemyCapsule")
 ghost = NodePath("EnemyCapsule/EnemyCapsule2")
 ghost2 = NodePath("EnemyCapsule/EnemyCapsule3")
-speed = null
 label = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=2032813561]

@@ -1,7 +1,7 @@
 extends Node
 
-var circular_arena_radius: float
-var circular_arena_position: Vector2
+@export var circular_arena_radius: float
+@export var circular_arena_position: Vector2
 
 func get_random_circle_pos(radius: float, center_position: Vector2) -> Vector2:
 	var random_angle = randf_range(0, TAU)

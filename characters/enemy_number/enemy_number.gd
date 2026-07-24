@@ -16,6 +16,9 @@ var value: int
 var player_node: Player = null
 var type : int
 
+var target_position: Vector2
+var direction: Vector2
+
 func _ready() -> void:
 	var random_num: int = randi_range(-9, 9)
 	value = random_num
@@ -31,8 +34,7 @@ func _physics_process(_delta: float) -> void:
 	if not player_node:
 		return
 		
-	var target_position: Vector2 = player_node.global_position
-	var direction = self.global_position.direction_to(target_position)
+	
 	handle_ghost()
 	
 	velocity = speed * direction
@@ -50,10 +52,10 @@ func _on_shoot_timeout() -> void:
 		return
 		
 	var player_pos := player_node.global_position
-	var direction := self.global_position.direction_to(player_pos)
+	var dir := self.global_position.direction_to(player_pos)
 	
 	var distance := 16
-	var shift_pos := (direction * distance)
+	var shift_pos := (dir * distance)
 	var spawn_position := self.global_position + shift_pos
 	
 	var projectile_instance := projectile_scene.instantiate()
@@ -65,6 +67,8 @@ func _on_shoot_timeout() -> void:
 func _on_player_detection_body_entered(body: Node2D) -> void:
 	if body is Player:
 		player_node = body
+		target_position = player_node.global_position
+		direction = self.global_position.direction_to(target_position)
 
 func _on_player_detection_body_exited(body: Node2D) -> void:
 	if body is Player:
