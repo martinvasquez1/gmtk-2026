@@ -80,7 +80,6 @@ func move(delta : float) -> void:
 	var dir : Vector2 = Input.get_vector("left","right","up","down")
 	var dashing = Input.is_action_just_pressed("dash")
 	if dashing and can_dash:
-		print("dashing")
 		dash()
 	
 	if movement_state == move_states.DASHING:
@@ -108,6 +107,8 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+func is_dashing():
+	return movement_state == move_states.DASHING
 
 func _on_dash_cooldown_timeout() -> void:
 	can_dash = true
