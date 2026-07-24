@@ -10,7 +10,7 @@ var current_time_seconds: int = 100:
 
 func update_label() -> void:
 	var new_value = StringUtils.get_formatted_time(current_time_seconds)
-	time_label.text = new_value
+	time_label.text = str(current_time_seconds)
 
 func _ready() -> void:
 	BossGlobals.boss_node = self
@@ -18,7 +18,3 @@ func _ready() -> void:
 
 func _on_one_second_timeout() -> void:
 	current_time_seconds -= 1
-
-func _on_hurt_box_area_entered(area: Area2D) -> void:
-	if area is NumberProjectile:
-		current_time_seconds += area.number_value

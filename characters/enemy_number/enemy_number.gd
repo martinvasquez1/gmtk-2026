@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export_group("Internal Nodes")
 @export var projectile_scene: PackedScene
 @export var death_particles: PackedScene
+@export var sprite : Sprite2D
 @export var ghost : Sprite2D
 @export var ghost2 : Sprite2D
 
@@ -13,11 +14,17 @@ extends CharacterBody2D
 
 var value: int
 var player_node: Player = null
+var type : int
 
 func _ready() -> void:
 	var random_num: int = randi_range(-9, 9)
-	
 	value = random_num
+	
+	type = randi_range(0,2)
+	sprite.frame = type
+	ghost.frame = type
+	ghost2.frame = type
+	
 	label.text = str(value)
 
 func _physics_process(_delta: float) -> void:

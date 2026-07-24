@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://tp8r1ribgduk" path="res://characters/enemy_number/enemy_number.gd" id="1_ky2cb"]
 [ext_resource type="PackedScene" uid="uid://baccpkg2qhbbb" path="res://projectiles/simple_projectile/simple_projectile.tscn" id="2_vprpp"]
 [ext_resource type="PackedScene" uid="uid://br02myd0wgfn3" path="res://characters/enemy_number/picked_up_particle.tscn" id="3_elld5"]
-[ext_resource type="Texture2D" uid="uid://brbxmddktnapc" path="res://characters/enemy_number/EnemyCapsule.png" id="4_ca8b5"]
+[ext_resource type="Texture2D" uid="uid://chgfvnwlu1rm0" path="res://characters/enemy_number/Capsule.png" id="5_ca8b5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_85g3d"]
 font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
@@ -17,20 +17,22 @@ radius = 152.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_as5p4"]
 radius = 5.0
 
-[node name="EnemyNumber" type="CharacterBody2D" unique_id=1444321047 node_paths=PackedStringArray("ghost", "ghost2", "label")]
+[node name="EnemyNumber" type="CharacterBody2D" unique_id=1444321047 node_paths=PackedStringArray("sprite", "ghost", "ghost2", "label")]
 script = ExtResource("1_ky2cb")
 projectile_scene = ExtResource("2_vprpp")
 death_particles = ExtResource("3_elld5")
+sprite = NodePath("EnemyCapsule")
 ghost = NodePath("EnemyCapsule/EnemyCapsule2")
 ghost2 = NodePath("EnemyCapsule/EnemyCapsule3")
+speed = null
 label = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=2032813561]
 z_index = 3
 offset_left = -20.0
-offset_top = -12.0
+offset_top = -13.0
 offset_right = 20.0
-offset_bottom = 11.0
+offset_bottom = 10.0
 theme_override_fonts/font = ExtResource("1_d5k4q")
 theme_override_font_sizes/font_size = 28
 text = "7"
@@ -40,18 +42,23 @@ vertical_alignment = 1
 
 [node name="EnemyCapsule" type="Sprite2D" parent="." unique_id=132322003]
 z_index = 2
-texture = ExtResource("4_ca8b5")
+texture = ExtResource("5_ca8b5")
+hframes = 3
 
 [node name="EnemyCapsule2" type="Sprite2D" parent="EnemyCapsule" unique_id=1222034222]
 self_modulate = Color(0.45882353, 0.45882353, 0.45882353, 1)
 top_level = true
 z_index = 1
-texture = ExtResource("4_ca8b5")
+texture = ExtResource("5_ca8b5")
+hframes = 3
+frame = 1
 
 [node name="EnemyCapsule3" type="Sprite2D" parent="EnemyCapsule" unique_id=1978406287]
 self_modulate = Color(0.25882354, 0.25882354, 0.25882354, 1)
 top_level = true
-texture = ExtResource("4_ca8b5")
+texture = ExtResource("5_ca8b5")
+hframes = 3
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1935737826]
 shape = SubResource("CircleShape2D_stnd7")
