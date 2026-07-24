@@ -11,5 +11,6 @@ autostart = true
 
 [node name="GetRandomRingPos" type="Node" parent="." unique_id=308881839]
 script = ExtResource("2_gppuq")
+circular_arena_radius = 350.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

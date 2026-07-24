@@ -16,7 +16,7 @@ func _ready() -> void:
 		GetRandomRingPos.circular_arena_position = generate_collision_ring.global_position
 
 func get_random_pos() -> Vector2:
-	if generate_collision_ring:
+	if !generate_collision_ring:
 		return GetRandomRingPos.get_random_circle_pos(GetRandomRingPos.circular_arena_radius, GetRandomRingPos.circular_arena_position)
 	else:
 		return Vector2.ZERO
