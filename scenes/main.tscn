@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ctbqgikkbq3y0" path="res://characters/player/player.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bcube0s0rem1b" path="res://characters/boss/boss.tscn" id="2_sugp2"]
 [ext_resource type="Script" uid="uid://37y046w6uwcr" path="res://effects/camera shake/camera_shake.gd" id="3_tipki"]
+[ext_resource type="WwiseBank" uid="uid://cb6g8t6q4aymo" path="res://Wwise/resources/SoundBank/{48FC7B7A-0F6C-4BDD-AD7C-65640DA734D8}.tres" id="6_tipki"]
 [ext_resource type="WwiseEvent" uid="uid://b0baw1lu2no7t" path="res://Wwise/resources/Event/{38464A60-077B-439A-BD78-5E3B5DAF030E}.tres" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://76j0xsy61cdh" path="res://UI/in_game/in_game.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://c5tx2ygvvrttk" path="res://scenes/enemy_spawner/enemy_spawner.tscn" id="9_85g3d"]
@@ -41,6 +42,11 @@ curve = SubResource("Curve2D_tipki")
 [node name="EnemySpawner" parent="." unique_id=1307649173 instance=ExtResource("9_85g3d")]
 
 [node name="InGameUI" parent="." unique_id=411547140 instance=ExtResource("8_tipki")]
+
+[node name="AkBank" type="AkBank" parent="." unique_id=538719561]
+bank = ExtResource("6_tipki")
+load_on = 1
+unload_on = 3
 
 [node name="AkListener2D" type="AkListener2D" parent="." unique_id=1667364466]
 
