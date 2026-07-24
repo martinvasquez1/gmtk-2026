@@ -8,6 +8,7 @@
 [ext_resource type="WwiseBank" uid="uid://cb6g8t6q4aymo" path="res://Wwise/resources/SoundBank/{48FC7B7A-0F6C-4BDD-AD7C-65640DA734D8}.tres" id="3_qtoa1"]
 [ext_resource type="Texture2D" uid="uid://iji3xu6ooggq" path="res://UI/main_menu/wing_2.png" id="4_rxajg"]
 [ext_resource type="Texture2D" uid="uid://cnvhlaextygep" path="res://UI/main_menu/start.png" id="5_1dcnu"]
+[ext_resource type="PackedScene" uid="uid://bktexyy3hykok" path="res://effects/ambience.tscn" id="9_0xi1j"]
 
 [node name="MainMenu" type="CanvasLayer" unique_id=86179456]
 script = ExtResource("1_osatk")
@@ -146,3 +147,6 @@ load_on = 1
 event = ExtResource("3_1xao8")
 trigger_on = 2
 stop_on = 3
+
+[node name="Ambience" parent="." unique_id=1333470062 instance=ExtResource("9_0xi1j")]
+z_index = -1
