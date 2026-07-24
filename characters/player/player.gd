@@ -1,6 +1,9 @@
 class_name Player
 extends CharacterBody2D
 
+enum move_states { UNDEFINED, FLYING, DASHING }
+var movement_state: move_states
+
 @export_group("Internal Nodes")
 @export var sprite : Sprite2D
 @export var spawn_position: Marker2D
@@ -12,6 +15,12 @@ extends CharacterBody2D
 @export var speed : float = 100
 @export var accel : float = 10
 @export var deaccel : float = 8
+
+@export var dash_cooldown : float = 3
+@export var dash_velocity : float = 30
+@export var dash_duration : float = 0.3
+var prev_velocity : Vector2
+var can_dash : bool
 
 @export var cam_shake_force : Vector2 = Vector2(1,1)
 @export var shake_time : float = 0.5
@@ -55,6 +64,13 @@ func recoil() -> void:
 	var mouse_dir : Vector2 = -global_position.direction_to(get_global_mouse_position())
 	velocity += mouse_dir * speed
 
+func dash() -> void:
+	can_dash = false
+	prev_velocity = velocity
+	movement_state = move_states.DASHING
+	$DashCooldown.start(dash_cooldown)
+	$DashStateExit.start(dash_duration)
+
 func _input(event: InputEvent) -> void:
 	var can_shoot := event.is_action_pressed("shoot") and has_unshot_number
 	if can_shoot:
@@ -62,12 +78,24 @@ func _input(event: InputEvent) -> void:
 
 func move(delta : float) -> void:
 	var dir : Vector2 = Input.get_vector("left","right","up","down")
+	var dashing = Input.is_action_just_pressed("dash")
+	if dashing and can_dash:
+		print("dashing")
+		dash()
 	
-	if dir:
-		last_dir = dir
-		velocity = lerp(velocity, dir * speed, delta * accel)
-	else:
-		velocity = lerp(velocity, Vector2.ZERO, delta * deaccel)
+	if movement_state == move_states.DASHING:
+		velocity = dir * dash_velocity
+	elif movement_state == move_states.FLYING:
+		if dir:
+			last_dir = dir
+			velocity = lerp(velocity, dir * speed, delta * accel)
+		else:
+			velocity = lerp(velocity, Vector2.ZERO, delta * deaccel)
+
+func _ready():
+	movement_state = move_states.FLYING
+	prev_velocity = Vector2(0,0)
+	can_dash = true
 
 func _physics_process(delta: float) -> void:
 	move(delta)
@@ -79,3 +107,11 @@ func _physics_process(delta: float) -> void:
 		look_at(mouse_pos)
 	
 	move_and_slide()
+
+
+func _on_dash_cooldown_timeout() -> void:
+	can_dash = true
+
+func _on_dash_state_exit_timeout() -> void:
+	movement_state = move_states.FLYING
+	velocity = prev_velocity

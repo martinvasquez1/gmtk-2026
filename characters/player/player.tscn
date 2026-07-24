@@ -18,6 +18,9 @@ ghost = NodePath("sprite/sprite2")
 ghost2 = NodePath("sprite/sprite3")
 accel = 2.0
 deaccel = 0.5
+dash_cooldown = 1.0
+dash_velocity = 300.0
+dash_duration = 0.05
 cam_shake_force = Vector2(-2, 3)
 shake_time = 0.1
 
@@ -45,3 +48,14 @@ position = Vector2(16, 0)
 
 [node name="hitstop" type="Node" parent="." unique_id=969440910]
 script = ExtResource("4_5dc8e")
+
+[node name="DashCooldown" type="Timer" parent="." unique_id=1113052208]
+process_callback = 0
+one_shot = true
+
+[node name="DashStateExit" type="Timer" parent="." unique_id=71320838]
+process_callback = 0
+one_shot = true
+
+[connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="DashStateExit" to="." method="_on_dash_state_exit_timeout"]
